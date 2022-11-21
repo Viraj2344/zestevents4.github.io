@@ -9,38 +9,83 @@
 </head>
 <link rel="stylesheet" href="https://fonts.google.com/specimen/Pacifico#styles">
 <body>
-  <h1>EVENTS</h1>
+  <h1 class="title">EVENTS</h1>
 <div class="container">
   
     <div class="slide-container-1" >
-      <div class="slide-container">
-        <p>kjdfblabvllabfoabfbw</p>
-    </div>
+      <div id="blur" class="slide-container">
+      </div>
+  <span class="text" id="desc_text">CYCLATHON</span>
   </div>
 
     <div class="slide-1">
-      <div class="slide" data-slide-no="1"></div> 
-     <div> <a href="instagram.com">  <div class="slide" data-slide-no="2"></div></a></div>
-        <div class="slide" data-slide-no="3"></div>
-        <div class="slide" data-slide-no="4"></div>
-        <div class="slide" data-slide-no="5"></div>
-        <div class="slide" data-slide-no="6"></div>
-        <div class="slide" data-slide-no="7"></div>
-        <div class="slide" data-slide-no="8"></div>
-        <div class="slide" data-slide-no="9"></div>
-        <div class="slide" data-slide-no="10"></div>
-        <div class="slide" data-slide-no="11"></div>
-        <div class="slide" data-slide-no="12"></div>
-        <!-- <div class="slide" data-slide-no="13"></div> -->
+        <div class="slide" onclick="changetext(this.id)" id="slide_1" data-slide-no="1"></div> 
+        <div class="slide" onclick="changetext(this.id)" id="slide_2" data-slide-no="2"></div>
+        <div class="slide" onclick="changetext(this.id)" id="slide_3" data-slide-no="3"></div>
+        <div class="slide" onclick="changetext(this.id)" id="slide_4" data-slide-no="4"></div>
+        <div class="slide" onclick="changetext(this.id)" id="slide_5" data-slide-no="5"></div>
+        <div class="slide" onclick="changetext(this.id)" id="slide_6" data-slide-no="6"></div>
+        <div class="slide" onclick="changetext(this.id)" id="slide_7" data-slide-no="7"></div>
+        <div class="slide" onclick="changetext(this.id)" id="slide_8" data-slide-no="8"></div>
+        <div class="slide" onclick="changetext(this.id)" id="slide_9" data-slide-no="9"></div>
+        <div class="slide" onclick="changetext(this.id)" id="slide_10" data-slide-no="10"></div>
+        <div class="slide" onclick="changetext(this.id)" id="slide_11" data-slide-no="11"></div>
+        <div class="slide" onclick="changetext(this.id)" id="slide_12" data-slide-no="12"></div>
+        <!-- <div class="slide"data-slide-no="13"></div> -->
         
       </div>
     </div>
+
     
   
       <div class="button-wrap">
         <button type="button" class="btn btn-prev">prev</button>
         <button type="button" class="btn btn-next">next</button>
       </div>
+
+     
+      <div class="cards">
+        <h1 class="title-2">FLAGSHIP EVENTS</h1>
+     <br>
+      <div class="container-2">
+         <div class="card">
+           <div class="face face1">
+             <div class="content">
+                <i class="fab fa-windows"></i>            
+               <h3>Windows</h3>
+             </div>
+           </div>
+           <div class="face face2">
+             <div class="content">
+               <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde ab repudiandae, explicabo voluptate et hic cum ratione a. Officia delectus illum perferendis maiores quia molestias vitae fugiat aspernatur alias corporis?</p>
+               <a href="#" type="button">Read More</a>
+             </div>
+           </div>
+        </div>
+        
+        <div class="card">
+           <div class="face face1">
+             <div class="content">
+          <i class="fab fa-android"></i>               <h3>Android</h3>
+             </div>
+           </div>
+           <div class="face face2">
+             <div class="content">
+               <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde ab repudiandae, explicabo voluptate et hic cum ratione a. Officia delectus illum perferendis maiores quia molestias vitae fugiat aspernatur alias corporis?</p>
+               <a href="#" type="button">Read More</a>
+             </div>
+           </div>
+        </div>
+        
+        
+       
+        
+        
+      </div>
+      </div>
       <script src="script.js"></script>
+      <script src="script2.js"></script>
+      
+      <script src="https://kit.fontawesome.com/95a02bd20d.js"></script>
 </body>
 </html>
