@@ -3,6 +3,8 @@ const slides = document.querySelectorAll('.slide');
 const btns = document.querySelectorAll('.btn');
 const btnPrev = document.querySelector('.btn-prev');
 const btnNext = document.querySelector('.btn-next');
+// const desc_text = document.getElementsByID('desc_text');
+// const desc = document.getElementById('desc_text')
 
 const n = slides.length;
 const angle = 360 / n;
@@ -79,7 +81,7 @@ const changeSlideImg = (e) => {
 
 positionSlides();
 nextSlide();
-autoPlay();
+// autoPlay();
 
 btnPrev.addEventListener('click', prevSlide);
 btnNext.addEventListener('click', nextSlide);
@@ -87,7 +89,7 @@ btns.forEach(btn => {
   btn.addEventListener('mouseenter', () => clearInterval(setId));
   btn.addEventListener('mouseleave', () => {
     clearInterval(setId);
-    autoPlay();
+    // autoPlay();
   });
 })
 slides.forEach(slide => {
@@ -95,22 +97,72 @@ slides.forEach(slide => {
     slide.addEventListener('click', (e) => {
       changeSlideImg(e);
       clearInterval(setId);
-      autoPlay();
+      // autoPlay();
     });
   }
   else {
-    slide.addEventListener('mouseenter', (e) => {
+    slide.addEventListener('click', (e) => {
       changeSlideImg(e);
       clearInterval(setId);
+
     });
+  
     // slide.addEventListener('mouseleave', () => {
     //   clearInterval(setId);
     //   autoPlay();
     // });
+
   }
 })
 window.addEventListener('resize', () => {
   clearInterval(setId);
   positionSlides();
-  autoPlay();
+  // autoPlay();
 })
+
+
+const desc = document.getElementById('desc_text')
+
+function changetext(id){
+    switch(id){
+      case 'slide_1':
+        desc.innerHTML = "<h1>FOOTBALL</h1>"+"        <h3>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem, at animi. A corrupti in cum distinctio voluptatum. Excepturi vero ullam eius sequi, recusandae veniam exercitationem iure, accusantium magnam, explicabo esse.</h3>        ";
+        break;
+    case 'slide_2':
+        desc.innerHTML = "<h1>BADMINTON</h1>"+"        <h3>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem, at animi. A corrupti in cum distinctio voluptatum. Excepturi vero ullam eius sequi, recusandae veniam exercitationem iure, accusantium magnam, explicabo esse.</h3>        ";
+        break;
+    case 'slide_3':
+        desc.innerHTML = "<h1>CARROM</h1>"+"        <h3>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem, at animi. A corrupti in cum distinctio voluptatum. Excepturi vero ullam eius sequi, recusandae veniam exercitationem iure, accusantium magnam, explicabo esse.</h3>        ";
+        break;
+    case 'slide_4':
+        desc.innerHTML = "<h1>CHESS</h1>"+"        <h3>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem, at animi. A corrupti in cum distinctio voluptatum. Excepturi vero ullam eius sequi, recusandae veniam exercitationem iure, accusantium magnam, explicabo esse.</h3>        ";
+        break;
+    case 'slide_5':
+        desc.innerHTML = "<h1>VOLLEYBALL</h1>"+"        <h3>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem, at animi. A corrupti in cum distinctio voluptatum. Excepturi vero ullam eius sequi, recusandae veniam exercitationem iure, accusantium magnam, explicabo esse.</h3>        ";
+        break;
+    case 'slide_6':
+        desc.innerHTML = "<h1>TABLETENNIS</h1>"+"        <h3>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem, at animi. A corrupti in cum distinctio voluptatum. Excepturi vero ullam eius sequi, recusandae veniam exercitationem iure, accusantium magnam, explicabo esse.</h3>        ";
+        break;
+    case 'slide_7':
+        desc.innerHTML = "<h1>KABBADI</h1>"+"        <h3>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem, at animi. A corrupti in cum distinctio voluptatum. Excepturi vero ullam eius sequi, recusandae veniam exercitationem iure, accusantium magnam, explicabo esse.</h3>        ";
+        break;
+    case 'slide_8':
+        desc.innerHTML = "<h1>KHOKHO</h1>"+"        <h3>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem, at animi. A corrupti in cum distinctio voluptatum. Excepturi vero ullam eius sequi, recusandae veniam exercitationem iure, accusantium magnam, explicabo esse.</h3>        ";
+        break;
+    case 'slide_9':
+        desc.innerHTML = "<h1>CYCLOTHON</h1>"+"        <h3>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem, at animi. A corrupti in cum distinctio voluptatum. Excepturi vero ullam eius sequi, recusandae veniam exercitationem iure, accusantium magnam, explicabo esse.</h3>        ";
+        break;
+    case 'slide_10':
+        desc.innerHTML = "<h1>MARATHON</h1>"+"        <h3>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem, at animi. A corrupti in cum distinctio voluptatum. Excepturi vero ullam eius sequi, recusandae veniam exercitationem iure, accusantium magnam, explicabo esse.</h3>        ";
+        break;
+    case 'slide_11':
+        desc.innerHTML = "<h1>WORKOUTWONDERS</H1>"+"        <h3>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem, at animi. A corrupti in cum distinctio voluptatum. Excepturi vero ullam eius sequi, recusandae veniam exercitationem iure, accusantium magnam, explicabo esse.</h3>        ";
+        break;
+    case 'slide_12':
+        desc.innerHTML = "<h1>YOGA</h1>"+"        <h3>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem, at animi. A corrupti in cum distinctio voluptatum. Excepturi vero ullam eius sequi, recusandae veniam exercitationem iure, accusantium magnam, explicabo esse.</h3>        ";
+        break;
+    default:
+        break;
+  
+    }
+  }
